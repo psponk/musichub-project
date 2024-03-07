@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a class='nav-button' href='home.html'>MUSIC HUB</a>
+        </div>
+        <ul>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Voice</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Recorder</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Save</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Profile</a></li>
+        </ul>
+    </nav>
+    <div class='home-container'>
+        <h1 class='home-title'>MUSIC HUB</h1>
+        <button onclick="window.location.href='register.html'" class="home-browse-button">
+            สมัครสมาชิก<input type="file" style="display: none;">
+        </button>
+        <button onclick="window.location.href='login.html'" class="home-browse-button">
+            เข้าสู่ระบบ<input type="file" style="display: none;">
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1B1B1B;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* ค่า z-index สูงกว่าหน้าอื่นๆ เพื่อให้ขึ้นหน้าสุด */
+}
+
+nav div {
+  margin: 0 10px;
+  background-color: #1B1B1B;
+  color: #EBEBEB;
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background-color: #1B1B1B;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li a {
+  background-color: #1B1B1B;
+  padding: 15px 30px 15px 30px;
+  text-decoration: none;
+  color: #EBEBEB;
+}
+
+a:hover {
+  background-color: #ED9441;
+}
+
+div a {
+  text-decoration: none;
+  background-color: #1B1B1B;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-top: 60px; /* ค่า margin-top ขึ้นอยู่กับความสูงของ nav */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

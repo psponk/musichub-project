@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียน</title>
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a class='nav-button' href='home.html'>MUSIC HUB</a>
+        </div>
+        <ul>
+            <li><a href='register.html' onclick="alert('กรุณาลงทะเบียนก่อนการใช้งาน')">Voice</a></li>
+            <li><a href='register.html' onclick="alert('กรุณาลงทะเบียนก่อนการใช้งาน')">Recorder</a></li>
+            <li><a href='register.html' onclick="alert('กรุณาลงทะเบียนก่อนการใช้งาน')">Save</a></li>
+            <li><a href='register.html' onclick="alert('กรุณาลงทะเบียนก่อนการใช้งาน')">Profile</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <form class="form" method="POST" action="register.php" onsubmit="validateForm(event)">
+            <h2>ลงทะเบียน</h2>
+            <div class="form-control">
+                <label>อีเมล</label>
+                <input type="text" name="email" id="email" style="border-color: green;">
+                <small id="errorEmail" style="color: red;"></small>
+            </div>
+            <div class="form-control">
+                <label>รหัสผ่าน</label>
+                <input type="password" name="password" id="password" style="border-color: green;">
+                <small id="errorPassword" style="color: red;"></small>
+            </div>
+            <div class="form-control">
+                <label>ยืนยันรหัสผ่าน</label>
+                <input type="password" id="repassword" style="border-color: green;">
+                <small id="errorRePassword" style="color: red;"></small>
+            </div>
+            <button type="submit">ลงทะเบียน</button>
+        </form>
+    </div>
+    <script>
+        async function validateForm(event) {
+            // รับค่าจากฟอร์ม
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var repassword = document.getElementById('repassword').value;
+        
+            // ตรวจสอบข้อมูล
+            if (email.includes('@')) {
+                document.getElementById('errorEmail').textContent = '';
+                document.getElementById('email').style.borderColor = 'green';
+            } else {
+                document.getElementById('errorEmail').textContent = 'รูปแบบอีเมลไม่ถูกต้อง';
+                document.getElementById('email').style.borderColor = 'red';
+                event.preventDefault();
+            }
+        
+            if (password.length >= 8) {
+                document.getElementById('errorPassword').textContent = '';
+                document.getElementById('password').style.borderColor = 'green';
+            } else {
+                document.getElementById('errorPassword').textContent = 'รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร';
+                document.getElementById('password').style.borderColor = 'red';
+                event.preventDefault();
+            }
+        
+            if (repassword !== ' ' && repassword === password) {
+                document.getElementById('errorRePassword').textContent = '';
+                document.getElementById('repassword').style.borderColor = 'green';
+            } else {
+                document.getElementById('errorRePassword').textContent = 'รหัสผ่านไม่ตรงกัน';
+                document.getElementById('repassword').style.borderColor = 'red';
+                event.preventDefault();
+            }
+        }
+    </script>
+</body>
+</html>

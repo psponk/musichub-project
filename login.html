@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a class='nav-button' href='home.html'>MUSIC HUB</a>
+        </div>
+        <ul>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Voice</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Recorder</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Save</a></li>
+            <li><a href='login.html' onclick="alert('กรุณา login ก่อนการใช้งาน')">Profile</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form class="form" action="login.php" method="POST">
+            <h2>ลงชื่อเข้าสู่ระบบ</h2>
+            <div class="form-control">
+                <label>อีเมล</label>
+                <input type="text" name="email" style="border-color: red;">
+                <small style="color: red;"><?php echo isset($_GET['error']) ? 'อีเมลหรือรหัสผ่านไม่ถูกต้อง' : ''; ?></small>
+            </div>
+            <div class="form-control">
+                <label>รหัสผ่าน</label>
+                <input type="password" name="password" style="border-color: red;">
+            </div>
+            <button type="submit">เข้าสู่ระบบ</button>
+            <p style="margin-top: 20px">ยังไม่ได้เป็นสมาชิก? <a href="register.html">สมัครสมาชิก</a></p>
+        </form>
+    </div>
+</body>
+</html>
